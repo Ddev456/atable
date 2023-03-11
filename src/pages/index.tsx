@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { type NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
-import Modal from "~/components/Modal";
-import { RecipeCard } from "~/components/RecipeCard";
+import Modal from '../components/Modal'
+import { RecipeCard } from "../components/RecipeCard";
 import { z } from "zod"
 
 const ApiResponseScheme = z.object({meals:z.array(z.object({
