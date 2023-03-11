@@ -23,14 +23,10 @@ export type Recipe = {
 
 const Home = (data: Recipes) => {
   
-  const [recipes, setRecipes] = useState<Recipes>(data)
-  const [recipe, setRecipe] = useState<Recipe>()
+  const [recipes] = useState<Recipes>(data)
   const [showModal, setShowModal] = useState<boolean>(false)
 
   const handleClick = () => {
-    const randomIndex = Math.floor(Math.random() * 24) + 1
-
-    setRecipe(recipes.meals[randomIndex])
     setShowModal(true)
   }
   return (
@@ -46,7 +42,7 @@ const Home = (data: Recipes) => {
       <Modal showModal={showModal} setShowModal={setShowModal}>
           <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
             <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-            <RecipeCard randomRecipe={recipe} />
+            <RecipeCard recipes={recipes.meals} />
           </div>
       </div>
     </Modal>
