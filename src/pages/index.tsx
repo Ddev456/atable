@@ -23,16 +23,13 @@ export type Recipe = {
 
 const Home = (data: Recipes) => {
   
-
-
-  console.log(data);  
   const [recipes, setRecipes] = useState<Recipes>(data)
   const [recipe, setRecipe] = useState<Recipe>()
   const [showModal, setShowModal] = useState<boolean>(false)
 
   const handleClick = () => {
     const randomIndex = Math.floor(Math.random() * 24) + 1
-    console.log(recipes.meals[randomIndex]);
+
     setRecipe(recipes.meals[randomIndex])
     setShowModal(true)
   }
@@ -57,7 +54,7 @@ const Home = (data: Recipes) => {
 
         <div className="text-center container flex flex-col items-center justify-center gap-12 px-4 py-16 w-3/5">
           <h1 className="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-[5rem]">
-            Générateur aléatoire 
+            2023 Générateur aléatoire 
            de <span className="text-[#10b981]">recette</span>
           </h1>
           

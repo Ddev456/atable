@@ -6,7 +6,6 @@ type RecipeCardProps = {
 }
 
 export const RecipeCard = ({randomRecipe}: RecipeCardProps) => {
-    console.log(randomRecipe);
     
   return (
     <div className="card w-96 bg-base-100">
