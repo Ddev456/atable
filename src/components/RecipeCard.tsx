@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { type Recipe } from '../pages/index'
 
@@ -9,7 +10,7 @@ export const RecipeCard = ({randomRecipe}: RecipeCardProps) => {
     
   return (
     <div className="card w-96 bg-base-100">
-              <figure><img src={randomRecipe?.strMealThumb} alt="thumbnail of recipe" /></figure>
+              { randomRecipe && <figure><Image src={randomRecipe?.strMealThumb} alt="thumbnail of recipe" /></figure> }
               <div className="card-body">
                 <h2 className="card-title">
                   {randomRecipe?.strMeal}
