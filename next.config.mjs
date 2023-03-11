@@ -20,5 +20,15 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'themealdb.com',
+        port: '',
+        pathname: '/api/json/v1/1/**',
+      },
+    ],
+  },
 };
 export default config;
