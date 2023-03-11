@@ -24,9 +24,7 @@ const config = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'themealdb.com',
-        port: '',
-        pathname: '/api/json/v1/1/**',
+        hostname: '**.themealdb.com',
       },
     ],
   },
